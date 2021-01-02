@@ -34,11 +34,14 @@
   --textarea_profile_input_width: 350px;
   --upgrade_left_column_width: 400px;
   --upgrade_right_column_width: 250px;
+
+  --body-margin-left: 20px;
 }
 
 body {
   color: #333;
   margin-left: 20px;
+  margin-left: var(--body-margin-left);
   font-size: 13px;
   font-family: helvetica, sans-serif;
   word-wrap: break-word;

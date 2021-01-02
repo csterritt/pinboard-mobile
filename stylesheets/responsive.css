@@ -1,0 +1,51 @@
+@media (max-width: 699px) {
+  :root {
+    --banner_width: 100%;
+    --bookmark_width: 98%;
+    --content_width: 100%;
+    --logo_width: auto;
+    --main_column_width: 100%;
+    --tag_cloud_width: 100%;
+
+    --body-margin-left: 2%;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #logo,
+  #top_menu {
+    float: none;
+    width: auto;
+  }
+
+  #main_column {
+    order: 2;
+  }
+
+  #right_bar {
+    order: 1;
+
+    margin-bottom: 15px;
+  }
+
+  #tag_cloud {
+    order: 3;
+  }
+
+  .bookmark {
+    padding: 0;
+  }
+
+  .display {
+    float: none;
+  }
+}
