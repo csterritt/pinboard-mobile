@@ -1,10 +1,11 @@
-@media (max-width: 699px) {
+@media (max-width: 700px) {
   :root {
     --banner_width: 100%;
     --bookmark_width: 98%;
     --content_width: 100%;
     --logo_width: auto;
     --main_column_width: 100%;
+    --right_bar_width: auto;
     --tag_cloud_width: 100%;
 
     --body-margin-left: 2%;
@@ -39,6 +40,78 @@
 
   #tag_cloud {
     order: 3;
+  }
+
+  .bookmark {
+    padding: 0;
+  }
+
+  .display {
+    float: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  :root {
+    --banner_width: 100%;
+    --bookmark_width: 98%;
+    --content_width: 100%;
+    --logo_width: auto;
+    --main_column_width: 100%;
+    --right_bar_width: auto;
+    --tag_cloud_width: 100%;
+
+    --body-margin-left: 2%;
+  }
+
+  #content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'banner banner'
+      'main_column right_bar'
+      'main_column tag_cloud';
+  }
+
+  #banner {
+    grid-area: banner;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #logo,
+  #top_menu {
+    float: none;
+    width: auto;
+  }
+
+  #main_column {
+    grid-area: main_column;
+  }
+
+  #right_bar {
+    grid-area: right_bar;
+    float: none;
+    margin-left: 0;
+  }
+
+  #tag_cloud {
+    grid-area: tag_cloud;
+  }
+
+  /*#searchbox {*/
+  /*  width: 100%;*/
+  /*}*/
+
+  /*#searchbox > form {*/
+  /*  width: 100%;*/
+  /*}*/
+
+  #searchbox > form > input {
+    width: 90%;
   }
 
   .bookmark {
